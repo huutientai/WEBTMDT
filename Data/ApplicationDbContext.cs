@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using webTMDT.Models;
 
 namespace webTMDT.Data
 {
@@ -9,5 +10,6 @@ namespace webTMDT.Data
             : base(options)
         {
         }
+        public DbSet<DanhMuc> danhmuc { get; set; }
     }
 }
