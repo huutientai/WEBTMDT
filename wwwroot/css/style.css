@@ -613,11 +613,11 @@ ol {
     border: 1px solid #ebebeb;
     position: relative;
     float: left;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
     .hero__search__form form .hero__search__categories {
-        width: 30%;
+        width: 17%;
         float: left;
         font-size: 16px;
         color: #1c1c1c;
@@ -645,7 +645,7 @@ ol {
         }
 
     .hero__search__form form input {
-        width: 70%;
+        width: 88%;
         border: none;
         height: 48px;
         font-size: 16px;
@@ -2706,6 +2706,8 @@ ol {
             color: #1c1c1c;
             height: 46px;
             border: 1px solid #ededed;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
             .footer__widget form input::placeholder {
