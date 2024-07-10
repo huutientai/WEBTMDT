@@ -1,4 +1,4 @@
-/*  ---------------------------------------------------
+﻿/*  ---------------------------------------------------
     Template Name: Ogani
     Description:  Ogani eCommerce  HTML Template
     Author: Colorlib
@@ -146,18 +146,36 @@
         }
     });
 
-    /*---------------------------------
-        Product Details Pic Slider
-    ----------------------------------*/
+    /*--------------------------
+        Product Details Slider
+    ----------------------------*/
     $(".product__details__pic__slider").owlCarousel({
-        loop: true,
-        margin: 20,
-        items: 4,
-        dots: true,
+        loop: false,
+        margin: 0,
+        items: 1,
+        dots: false,
+        nav: true,
+        navText: ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"],
         smartSpeed: 1200,
         autoHeight: false,
-        autoplay: true
+        autoplay: false,
+        mouseDrag: false,
+        startPosition: 'URLHash'
+    }).on('changed.owl.carousel', function (event) {
+        var indexNum = event.item.index + 1;
+        product_thumbs(indexNum);
     });
+
+    function product_thumbs(num) {
+        var thumbs = document.querySelectorAll('.product__thumb a');
+        thumbs.forEach(function (e) {
+            e.classList.remove("active");
+            if (e.hash.split("-")[1] == num) {
+                e.classList.add("active");
+            }
+        })
+    }
+
 
     /*-----------------------
 		Price Range Slider
@@ -173,12 +191,12 @@
         max: maxPrice,
         values: [minPrice, maxPrice],
         slide: function (event, ui) {
-            minamount.val('$' + ui.values[0]);
-            maxamount.val('$' + ui.values[1]);
+            minamount.val(ui.values[0] + '.000Đ');
+            maxamount.val(ui.values[1] + '.000Đ');
         }
     });
-    minamount.val('$' + rangeSlider.slider("values", 0));
-    maxamount.val('$' + rangeSlider.slider("values", 1));
+    minamount.val(rangeSlider.slider("values", 0) + '.000Đ');
+    maxamount.val(rangeSlider.slider("values", 1) + '.000Đ');
 
     /*--------------------------
         Select
@@ -219,6 +237,30 @@
             }
         }
         $button.parent().find('input').val(newVal);
+    });
+    /*-------------------
+       Radio Btn
+   --------------------- */
+    $(".size__btn label").on('click', function () {
+        $(".size__btn label").removeClass('active');
+        $(this).addClass('active');
+    });
+    /*------------------
+        Magnific
+    --------------------*/
+    $('.image-popup').magnificPopup({
+        type: 'image'
+    });
+
+
+    $(".nice-scroll").niceScroll({
+        cursorborder: "",
+        cursorcolor: "#dddddd",
+        boxzoom: false,
+        cursorwidth: 5,
+        background: 'rgba(0, 0, 0, 0.2)',
+        cursorborderradius: 50,
+        horizrailenabled: false
     });
 
 })(jQuery);

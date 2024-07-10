@@ -101,8 +101,8 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href=""><i class='bx bxs-home'></i>Home</a></li>
-                            <li><a href="./shop-grid.html">Shop</a></li>
+                            <li class="active"><a href="./home.cshtml"><i class='bx bxs-home'></i>Home</a></li>
+                            <li><a href="./shop.cshtml">Shop</a></li>
                             <li>
                                 <a href="#">Pages</a>
                                 <ul class="header__menu__dropdown">
@@ -132,7 +132,28 @@
             </div>
         </div>
     </header>
-    
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    Tìm kiếm
+                                </div>
+                                <input type="text" placeholder="">
+                                <button type="submit" class="site-btn"><i class='bx bx-search'></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
             @RenderBody()
         
 
