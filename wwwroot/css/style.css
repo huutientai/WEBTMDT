@@ -617,7 +617,7 @@ ol {
 }
 
     .hero__search__form form .hero__search__categories {
-        width: 17%;
+        width: 20%;
         float: left;
         font-size: 16px;
         color: #1c1c1c;
@@ -645,7 +645,7 @@ ol {
         }
 
     .hero__search__form form input {
-        width: 88%;
+        width: 80%;
         border: none;
         height: 48px;
         font-size: 16px;
