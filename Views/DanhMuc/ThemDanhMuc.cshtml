@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model DanhMuc
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Namedanhmuc">Tên Danh mục</label>
+            <input asp-for="Namedanhmuc" class="form-control" />
+            <span asp-validation-for="Namedanhmuc" class="text-danger"></span>
+        </div>
+        <!-- Hidden Description field to set DateTime -->
+        <div style="display: none;">
+            <input asp-for="Description" class="form-control" value="@DateTime.Now" />
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm danh mục</button>
+    </form>
+</div>
