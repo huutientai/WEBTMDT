@@ -1714,19 +1714,21 @@ ol {
 
             .product__details__widget ul li .stock__checkbox label {
                 display: block;
-                padding-left: 20px;
+                padding-left: 1px;
                 font-size: 14px;
                 color: #666666;
                 position: relative;
+                padding-top: 8px;
             }
 
-                
+
 
         .product__details__widget ul li .color__checkbox label {
             display: inline-block;
             cursor: pointer;
             position: relative;
             margin-right: 20px;
+            padding-top: 8px;
         }
 
             .product__details__widget ul li .color__checkbox label.active input ~ .checkmark:after {
@@ -1789,7 +1791,7 @@ ol {
             cursor: pointer;
             margin-right: 10px;
             display: inline-block;
-            margin-bottom: 0;
+            padding-top: 8px;
         }
 
             .product__details__widget ul li .size__btn label:last-child {
