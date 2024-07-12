@@ -11,5 +11,6 @@ namespace webTMDT.Data
         {
         }
         public DbSet<DanhMuc> danhmuc { get; set; }
+        public DbSet<SanPham> sanpham { get; set; }
     }
 }
