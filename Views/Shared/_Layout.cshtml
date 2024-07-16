@@ -95,25 +95,16 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a class="logo_size" href=""><img src="img/logo.png" alt=""></a>
+                        <a class="logo_size" asp-action="Index" asp-controller="Home"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./home.cshtml"><i class='bx bxs-home'></i>Home</a></li>
-                            <li><a href="./shop.cshtml">Shop</a></li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li class="active"><a asp-action="Index" asp-controller="Home"><i class='bx bxs-home'></i>Home</a></li>
+                            <li><a asp-action="Index" asp-controller="Shop">Shop</a></li>
+                            <li><a asp-action="Index" asp-controller="product_detail">Product Details</a></li>
+                            <li><a asp-action="Index" asp-controller="cart">Cart</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -163,7 +154,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="footer__about">
                         <div class="footer__about__logo">
-                            <a class="logo_size" href="./index.html"><img src="img/logo.png" alt=""></a>
+                            <a class="logo_size" asp-action="Index" asp-controller="Home"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
                             <li>Địa chỉ: 60-49 Road 11378 New York</li>

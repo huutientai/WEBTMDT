@@ -5,9 +5,9 @@
 }
 
 @model DanhMuc
-<div class="container">
-    <form method="post">
-        <div class="form-group">
+<div class="container contain">
+    <form class="form-group" method="post">
+        <div>
             <label asp-for="Namedanhmuc">Tên Danh mục</label>
             <input asp-for="Namedanhmuc" class="form-control" />
             <span asp-validation-for="Namedanhmuc" class="text-danger"></span>

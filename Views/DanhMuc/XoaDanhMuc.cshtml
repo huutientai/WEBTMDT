@@ -5,11 +5,11 @@
 }
 
 @model DanhMuc
-<div class="container">
+<div class="container contain">
     <h1>Chỉnh sửa danh mục</h1>
-    <form asp-action="XacNhanXoa" method="post">
+    <form class="form-group" asp-action="XacNhanXoa" method="post">
         <input asp-for="Id" type="hidden"/>
-        <div class="form-group">
+        <div>
             <label afsp-or="Namedanhmuc">Tên Danh mục</label>
             <input asp-for="Namedanhmuc" class="form-control" />
             <span asp-validation-for="Namedanhmuc" class="text-danger"></span>
