@@ -4,9 +4,9 @@ namespace webTMDT.Models
 {
     public class DanhMuc
     {
-        [Key]
+        [Key] // khoá để chỉ đến nó tự động và động nhất
         public int Id { get; set; }
-        [Required]
+        [Required] //yêu cầu bắt buộc
         public string? Namedanhmuc { get; set; }
         public DateTime Description { get; set; } = DateTime.Now;
     }
