@@ -4,30 +4,31 @@
 @{
 }
 @model SanPham
-<div class="container">
-    <form enctype="multipart/form-data" method="post">
-        <div class="form-group">
+<div class="container contain">
+    <h1>Thêm sản phẩm</h1>
+    <form class="form-group" enctype="multipart/form-data" method="post">
+        <div class="space">
             <label asp-for="TenSanPham">Tên Sản phẩm</label>
             <input asp-for="TenSanPham" class="form-control" />
         </div>
-        <div class="form-group">
+        <div class="space">
             <label asp-for="ImgDaiDien">Hình Ảnh Sản Phẩm</label>
             <input type="file" id="imageFile" class="form-control" />
             <input type="hidden" asp-for="ImgDaiDien" id="imageBase64" />
         </div>
-        <div class="form-group">
+        <div class="space">
             <label asp-for="GiaSanpham">Giá Bán Sản Phẩm</label>
             <input asp-for="GiaSanpham" class="form-control" />
         </div>
-        <div class="form-group">
-            <label asp-for="GiamGia">Giá Giảm giá</label>
+        <div class="space">
+            <label asp-for="GiamGia">Giảm giá</label>
             <input asp-for="GiamGia" class="form-control" />
         </div>
-        <div class="form-group">
+        <div class="space">
             <label asp-for="MoTaSanPham">Mô Tả Sản PHẩm</label>
             <textarea rows="3" cols="50" asp-for="MoTaSanPham"></textarea>
         </div>
-        <div class="form-group">
+        <div class="space">
             <label asp-for="DanhmucId">Thuộc Danh Mục</label>
             <select asp-for="DanhmucId" asp-items="@(new SelectList(ViewBag.DanhMucList, "Id", "Namedanhmuc"))" class="form-control">
                 <option value="">Chọn danh mục</option>

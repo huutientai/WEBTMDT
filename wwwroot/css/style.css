@@ -2864,6 +2864,9 @@ ol {
 .form-group .btn-primary {
     margin-top: 10px;
 }
+.contain .space {
+    margin-bottom: 15px;
+}
 /*---------------------
   Contact Form
 -----------------------*/
